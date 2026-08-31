@@ -24,14 +24,19 @@ const sugestoes = document.getElementById('sugestoes')
 
 climaAtual.addEventListener('click', () => {
 
+    const seta = climaAtual.querySelector(".seta");
+
     if (buscaClima.style.display === 'block') {
         buscaClima.style.display = 'none';
+        seta.textContent = '▼';
     } else {
         buscaClima.style.display = 'block';
+        seta.textContent = '▲';
         cidadeInput.focus();
     }
 
 });
+
 
 const cidadePadrao = {
     nome: "São Paulo",
@@ -54,9 +59,10 @@ async function buscarClima(cidade) {
         climaAtual.innerHTML = `
     <p>
          ${emoji} ${cidade.nome} ${temperatura}C°
-         <span class="seta">⌄</span> 
+     
+         <span class="seta">▼</span> 
     </p>`;
-
+    
     } catch (erro) {
         climaAtual.innerHTML = `<p>Clima indsponvel</p>`;
         console.error(erro);
@@ -64,6 +70,7 @@ async function buscarClima(cidade) {
 
 
 }
+
 
 
 function escolherEmoji(codigo) {
@@ -149,6 +156,7 @@ cidadeInput.addEventListener('input', async () => {
                     longitude: local.longitude
                 };
 
+                
                 buscarClima(cidadeEscolhida);
 
                 cidadeInput.value = "";
