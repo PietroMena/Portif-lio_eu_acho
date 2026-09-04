@@ -46,6 +46,7 @@
 #nome-nav {
     padding-left: 30px;
     display: flex;
+    cursor: default;
 }
 
 #nome-nav:hover {
@@ -136,26 +137,6 @@
     color: var(--nav-bar-color);
 }
 
-#text {
-    display: block;
-    width: 490px;
-
-    min-height: 50px;
-    height: auto;
-
-    word-break: break-all;
-    overflow-wrap: break-word;
-
-    padding: 15px 15px 15px 15px;
-    box-sizing: border-box;
-
-    margin-top: 90px;
-    transform: translateX(-150px);
-    color: white;
-    font-size: 15px;
-    background-color: var(--nav-bar-color);
-    border-radius: 3px;
-}
 
 #cidadeInput {
     background-color: var(--nav-bar-color);
@@ -197,8 +178,19 @@
     align-items: center;
     font-size: 20px;
     margin-left: 15px;
-    cursor:pointer;
-    
+    cursor: pointer;
+}
+
+#setaUp {
+    display: flex;
+    width: 25px;
+    height: 25px;
+}
+
+#setaDown {
+    display: flex;
+    width: 25px;
+    height: 25px;
 }
 
 .busca-clima {
@@ -238,10 +230,44 @@
     cursor: pointer;
 }
 
-.borda{
+.borda {
     display: flex;
     border: 1px rgb(0, 0, 0) solid;
     width: auto;
     height: auto;
     border-radius: 5px;
+}
+
+
+.links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkedin a,
+.git a{
+    display: flex;
+    width: 120px;
+    height: 40px;
+   background: linear-gradient(150deg,rgba(2, 68, 83, 1) 67%, rgba(72, 176, 164, 1) 100%);
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+    font-size: 15px;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+
+    color: white;
+    text-decoration: none;
+}
+
+.linkedin a:hover, .github a:hover{
+    background-color: aqua;
 }
