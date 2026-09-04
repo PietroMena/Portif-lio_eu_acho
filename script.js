@@ -28,10 +28,11 @@ climaAtual.addEventListener('click', () => {
 
     if (buscaClima.style.display === 'block') {
         buscaClima.style.display = 'none';
-        seta.textContent = '▼';
+        seta.innerHTML = '<img src="/img/setaDown.png" alt="" id="setaDown">';
+
     } else {
         buscaClima.style.display = 'block';
-        seta.textContent = '▲';
+        seta.innerHTML = '<img src="/img/setaUp.png" alt="" id="setaUp">';
         cidadeInput.focus();
     }
 
@@ -60,9 +61,11 @@ async function buscarClima(cidade) {
     <p>
          ${emoji} ${cidade.nome} ${temperatura}C°
      
-         <span class="seta">▼</span> 
+         <span class="seta">
+        <img src="/img/setaDown.png" alt="" id="setaDown">
+         </span> 
     </p>`;
-    
+
     } catch (erro) {
         climaAtual.innerHTML = `<p>Clima indsponvel</p>`;
         console.error(erro);
@@ -156,7 +159,7 @@ cidadeInput.addEventListener('input', async () => {
                     longitude: local.longitude
                 };
 
-                
+
                 buscarClima(cidadeEscolhida);
 
                 cidadeInput.value = "";
@@ -174,3 +177,6 @@ cidadeInput.addEventListener('input', async () => {
 
 
 buscarClima(cidadePadrao);
+
+
+
