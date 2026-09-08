@@ -246,12 +246,14 @@
     justify-content: center;
 }
 
-.linkedin a,
+.linked a,
 .git a{
     display: flex;
     width: 120px;
     height: 40px;
-   background: linear-gradient(150deg,rgba(2, 68, 83, 1) 67%, rgba(72, 176, 164, 1) 100%);
+   background: var(--nav-bar-color);
+    box-shadow: 8px 5px 8px white;
+
     justify-content: center;
     align-items: center;
     border-radius: 5px;
@@ -266,8 +268,12 @@
 
     color: white;
     text-decoration: none;
+    transition: 0.5s;
 }
 
-.linkedin a:hover, .github a:hover{
-    background-color: aqua;
+.linked a:hover, .git a:hover{
+    background-color: white;
+    color: var(--nav-bar-color);
+    box-shadow: 8px 5px 8px var(--nav-bar-color);
+    transition: 0.3s;
 }
