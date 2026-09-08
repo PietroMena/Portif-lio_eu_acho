@@ -28,11 +28,11 @@ climaAtual.addEventListener('click', () => {
 
     if (buscaClima.style.display === 'block') {
         buscaClima.style.display = 'none';
-        seta.innerHTML = '<img src="/img/setaDown.png" alt="" id="setaDown">';
+        seta.innerHTML = '<img src="./img/setaDown.png" alt="" id="setaDown">';
 
     } else {
         buscaClima.style.display = 'block';
-        seta.innerHTML = '<img src="/img/setaUp.png" alt="" id="setaUp">';
+        seta.innerHTML = '<img src="./img/setaUp.png" alt="" id="setaUp">';
         cidadeInput.focus();
     }
 
@@ -62,7 +62,7 @@ async function buscarClima(cidade) {
          ${emoji} ${cidade.nome} ${temperatura}C°
      
          <span class="seta">
-        <img src="/img/setaDown.png" alt="" id="setaDown">
+        <img src="./img/setaDown.png" alt="" id="setaDown">
          </span> 
     </p>`;
 
@@ -180,3 +180,10 @@ buscarClima(cidadePadrao);
 
 
 
+//Mudar as logos do linkedin e github quando passar o mouse em cima
+
+document.getElementById("Linkedin");
+
+document.addEventListener('mouseenter', () => {
+    logoLinkedin.src = './img/linkedin-hover.png';
+});
