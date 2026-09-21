@@ -20,10 +20,9 @@
 }
 
 .clock {
-    background-color: var(--nav-bar-color);
     height: 30px;
     font-size: 25px;
-    color: white;
+    color: var(--nav-bar-color);
     margin-left: 30px;
 }
 
@@ -106,10 +105,7 @@
         linear-gradient(to bottom,
             rgb(255, 255, 255) 0%,
             rgba(156, 156, 156, 0.779) 20%,
-            rgba(0, 0, 0, 0) 50%,
-            rgba(156, 156, 156, 0.700) 90%,
-            rgb(255, 255, 255, 0.900) 98%,
-            rgb(255, 255, 255 ) 100%),
+            rgba(0, 0, 0, 0) 50%),
         url('./img/fotoFundo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -279,20 +275,23 @@
     transition: 0.2s;
 }
 
-.sobre-eu {
-    padding: 40px;
-    margin-left: 170px;
+
+/* Agora é o Meio*/
+
+.conhecimento {
+    width: 100%;
+    min-height: 100dvh;
 }
+
 
 .quad-sobre {
     display: flex;
-    padding: 15px;
-    background-color: var(--nav-bar-color);
-    color: white;
-    width: 350px;
-    height: 430px;
-    align-items: center;
-    justify-self: center;
+    padding: 80px;
+    width: 450px;
+    height: auto;
+
+    color: var(--nav-bar-color);
+    text-align: justify;
 
     font-size: 16px;
     line-height: 1.5;
@@ -305,11 +304,4 @@
 
     border-radius: 10px;
 
-}
-
-/* Agora é o Meio*/
-
-.conhecimento {
-    width: 100%;
-    min-height: 100dvh;
 }
