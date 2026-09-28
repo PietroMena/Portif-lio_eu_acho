@@ -180,10 +180,23 @@ buscarClima(cidadePadrao);
 
 
 
-//Mudar as logos do linkedin e github quando passar o mouse em cima
 
-document.getElementById("Linkedin");
 
-document.addEventListener('mouseenter', () => {
-    logoLinkedin.src = './img/linkedin-hover.png';
-});
+
+
+gsap.fromTo(".sobre-mim",
+
+    {
+        x: -100,
+        opacity: 0
+    },
+
+    {
+        x: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: "power2.out",
+
+
+    }
+);
