@@ -371,3 +371,61 @@
     transform: scale(1.04);
     transition: 0.2s;
 }
+
+
+.tela-meio-2 {
+    display: flex;
+    width: 100%;
+
+    min-height: 100dvh;
+
+}
+
+.quad-linguagens {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: start;
+    padding-top: 60px;
+    flex-direction: column;
+}
+
+.tit {
+    display: flex;
+    padding: 80px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    margin-bottom: 30px;
+
+}
+
+.ling {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: auto;
+    margin-left: 100px;
+
+}
+
+.ling img {
+    width: 35px;
+    height: 35px;
+    background-color: var(--nav-bar-color);
+    
+    padding: 15px;           
+    box-sizing: content-box; 
+
+}
+
+.ling img:hover{
+
+}
